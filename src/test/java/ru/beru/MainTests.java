@@ -31,7 +31,7 @@ public class MainTests extends DriverSetup {
         loginPage.clickSubmitBtn();
 
         homePage.assertLoginBtnChange();
-        logger.info("Test finished successfully");
+        logger.info("First test finished successfully");
     }
 
     @Test
@@ -46,9 +46,9 @@ public class MainTests extends DriverSetup {
         logger.info("Set region");
         setCityPage.enterRegion("Хвалынск");
 
-//        logger.info("Confirm region");
-//        ConfirmCityPage confirmCityPage = new ConfirmCityPage(getEventDriver(), getWait());
-//        confirmCityPage.confirmRegion();
+        logger.info("Confirm region");
+        ConfirmCityPage confirmCityPage = new ConfirmCityPage(getEventDriver(), getWait());
+        confirmCityPage.confirmRegion();
 
 
 //        homePage.clickRegion();
@@ -96,7 +96,9 @@ public class MainTests extends DriverSetup {
 
     @Test
     public void thirdTest() {
+        logger.info("Start third test.");
         HomePage homePage = new HomePage(getEventDriver(), getWait());
+
 //        homePage.clickCatalogBtn();
 //        homePage.chooseToothbrushes();
 //
